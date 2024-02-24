@@ -18,7 +18,6 @@ export default function Search() {
     if (!localStorage.getItem('photo-gallary')) {
       console.log('No photo gallary')
       localStorage.setItem('photo-gallary', JSON.stringify([]))
-      return;
     }
 
     // turning localstore string item into json object then validating it
@@ -86,7 +85,7 @@ export default function Search() {
             // setting time out so search item can be selected before showsearch is toggled
             setTimeout(() => {
               setShowSearch(false)
-            }, 500);
+            }, 150);
           }}
         />
       </form>
